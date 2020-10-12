@@ -21,9 +21,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3636def4-763b-420e-bfc7-8dda4b775e51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TetricBlock.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TetrisSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/I Tetromino.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/I Tetromino.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TetricBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TetricBlock.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +37,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/TetrisSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/lyf/UnityProject/Tetris/Assets/Scenes/I Tetromino.prefab" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/TetrisSpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/TetricBlock.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Assets/TetricBlock.cs" />
       </list>
     </option>
   </component>
@@ -52,6 +54,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502825" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30006278" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -64,11 +68,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23851">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="23851" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -94,8 +98,18 @@
       <updated>1602386389315</updated>
       <workItem from="1602386397970" duration="11536000" />
       <workItem from="1602429884060" duration="123000" />
-      <workItem from="1602430130735" duration="565000" />
+      <workItem from="1602430130735" duration="968000" />
+      <workItem from="1602463548537" duration="589000" />
+      <workItem from="1602509294027" duration="1946000" />
     </task>
+    <task id="LOCAL-00001" summary="seven tetris and rotate">
+      <created>1602430802570</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602430802570</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,19 +148,76 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="seven tetris and rotate" />
+    <option name="LAST_COMMIT_MESSAGE" value="seven tetris and rotate" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="410" y="94" key="CommitChangelistDialog2" timestamp="1602430505800">
+    <state x="410" y="94" key="CommitChangelistDialog2" timestamp="1602430802405">
       <screen x="0" y="23" width="1680" height="974" />
     </state>
-    <state x="410" y="94" key="CommitChangelistDialog2/0.23.1680.974@0.23.1680.974" timestamp="1602430505800" />
+    <state x="410" y="94" key="CommitChangelistDialog2/0.23.1680.974@0.23.1680.974" timestamp="1602430802405" />
+    <state width="1624" height="351" key="GridCell.Tab.0.bottom" timestamp="1602510658808">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state width="1624" height="351" key="GridCell.Tab.0.bottom/0.23.1680.974@0.23.1680.974" timestamp="1602510658808" />
+    <state width="1624" height="351" key="GridCell.Tab.0.center" timestamp="1602510658807">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state width="1624" height="351" key="GridCell.Tab.0.center/0.23.1680.974@0.23.1680.974" timestamp="1602510658807" />
+    <state width="1624" height="351" key="GridCell.Tab.0.left" timestamp="1602510658807">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state width="1624" height="351" key="GridCell.Tab.0.left/0.23.1680.974@0.23.1680.974" timestamp="1602510658807" />
+    <state width="1624" height="351" key="GridCell.Tab.0.right" timestamp="1602510658808">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state width="1624" height="351" key="GridCell.Tab.0.right/0.23.1680.974@0.23.1680.974" timestamp="1602510658808" />
+    <state width="1624" height="351" key="GridCell.Tab.1.bottom" timestamp="1602510659725">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state width="1624" height="351" key="GridCell.Tab.1.bottom/0.23.1680.974@0.23.1680.974" timestamp="1602510659725" />
+    <state width="1624" height="351" key="GridCell.Tab.1.center" timestamp="1602510659720">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state width="1624" height="351" key="GridCell.Tab.1.center/0.23.1680.974@0.23.1680.974" timestamp="1602510659720" />
+    <state width="1624" height="351" key="GridCell.Tab.1.left" timestamp="1602510659719">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state width="1624" height="351" key="GridCell.Tab.1.left/0.23.1680.974@0.23.1680.974" timestamp="1602510659719" />
+    <state width="1624" height="351" key="GridCell.Tab.1.right" timestamp="1602510659724">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state width="1624" height="351" key="GridCell.Tab.1.right/0.23.1680.974@0.23.1680.974" timestamp="1602510659724" />
     <state x="341" y="149" key="SettingsEditor" timestamp="1602411728266">
       <screen x="0" y="23" width="1680" height="974" />
     </state>
     <state x="341" y="149" key="SettingsEditor/0.23.1680.974@0.23.1680.974" timestamp="1602411728266" />
+    <state x="433" y="237" key="Vcs.Push.Dialog.v2" timestamp="1602430974058">
+      <screen x="0" y="23" width="1680" height="974" />
+    </state>
+    <state x="433" y="237" key="Vcs.Push.Dialog.v2/0.23.1680.974@0.23.1680.974" timestamp="1602430974058" />
     <state x="671" y="252" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1602430576149">
       <screen x="0" y="23" width="1680" height="974" />
     </state>
     <state x="671" y="252" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.23.1680.974@0.23.1680.974" timestamp="1602430576149" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/TetricBlock.cs</url>
+          <line>87</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/TetricBlock.cs" initialLine="87">
+            <startOffsets>
+              <option value="2454" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2484" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
