@@ -11,10 +11,12 @@ public class TetricBlock : MonoBehaviour
 
     public float fallInterval = 0.8f;
 
-    public static float height = 20;
-    public static float width = 10;
+    public static int height = 20;
+    public static int width = 10;
 
     private float left, right, bottom, up;
+    
+    private static Transform[,] grids = new Transform[width+2, height+2];
     // Start is called before the first frame update
     
     void Start()
@@ -24,6 +26,8 @@ public class TetricBlock : MonoBehaviour
         right =  width / 2;
         bottom = - height / 2;
         up =  height / 2;
+        
+        print($"left {left} right {right} bottom {bottom}");
     }
 
     // Update is called once per frame
@@ -55,6 +59,7 @@ public class TetricBlock : MonoBehaviour
             if (!ValidMove())
             {
                 transform.position -= new Vector3(0,-1,0);
+                AddGrid();
                 this.enabled = false;
                 FindObjectOfType<TetrisSpawner>().NewTetris();
             }
@@ -71,9 +76,24 @@ public class TetricBlock : MonoBehaviour
             }
         }
     }
+
+    void AddGrid()
+    {
+        int xOffset = width / 2;
+        int yOffset = height / 2;
+        foreach (Transform child in transform)
+        {
+            int roundX = (int) (child.position.x + xOffset);
+            int roundY = (int) (child.position.y + yOffset);
+            grids[roundX, roundY] = child;
+        }
+    }
     
     bool ValidMove()
     {
+        int xOffset = width / 2;
+        int yOffset = height / 2;
+        
         foreach (Transform children in transform)
         {
             var position = children.transform.position;
@@ -82,6 +102,14 @@ public class TetricBlock : MonoBehaviour
             {
                 return false;
             }
+            
+            int roundX = (int) (children.position.x + xOffset);
+            int roundY = (int) (children.position.y + yOffset);
+            if (grids[roundX, roundY] != null)
+            {
+                return false;
+            }
+            
         }
         return true;
     }
