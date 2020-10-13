@@ -16,7 +16,8 @@ public class TetricBlock : MonoBehaviour
 
     private float left, right, bottom, up;
     
-    private static Transform[,] grids = new Transform[width+2, height+2];
+    
+    private static Transform[,] grids = new Transform[width, height];
     // Start is called before the first frame update
     
     void Start()
@@ -77,10 +78,13 @@ public class TetricBlock : MonoBehaviour
         }
     }
 
+    
+    
+    
     void AddGrid()
     {
-        int xOffset = width / 2;
-        int yOffset = height / 2;
+        float xOffset = width / 2-0.5f;
+        float yOffset = height / 2-0.5f;
         foreach (Transform child in transform)
         {
             int roundX = (int) (child.position.x + xOffset);
