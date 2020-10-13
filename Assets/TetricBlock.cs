@@ -19,7 +19,9 @@ public class TetricBlock : MonoBehaviour
     
     private static Transform[,] grids = new Transform[width, height];
     // Start is called before the first frame update
-    
+
+    private float xOffset = width / 2 -0.4f;
+    private float yOffset = height / 2 - 0.4f;
     void Start()
     {
         var position = transform.position;
@@ -61,6 +63,7 @@ public class TetricBlock : MonoBehaviour
             {
                 transform.position -= new Vector3(0,-1,0);
                 AddGrid();
+                CheckFull();
                 this.enabled = false;
                 FindObjectOfType<TetrisSpawner>().NewTetris();
             }
@@ -78,13 +81,60 @@ public class TetricBlock : MonoBehaviour
         }
     }
 
+
+    void CheckFull()
+    {
+        for (int i = height -1; i >=0; i--)
+        {
+            if (HasFullLine(i))
+            {
+                DeleteLine(i);
+                RowDown(i);
+            }
+        }
+    }
+
+    bool HasFullLine(int row)
+    {
+        for (int i = 0; i < width; i++)
+        {
+            if (grids[i, row] == null)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    void DeleteLine(int row)
+    {
+        for (int i = 0; i < width; i++)
+        {
+            Destroy(grids[i, row].gameObject);
+            grids[i, width] = null;
+        }
+    }
+
+    void RowDown(int row)
+    {
+        for(int i = row +1; i< height; i++)
+        {
+            for (int j = 0; j < width; j++)
+            {
+                if (grids[j, i] != null)
+                {
+                    grids[j, i - 1] = grids[j, i];
+                    grids[j, i] = null;
+                    grids[j, i -1].transform.position -= new Vector3(0, 1, 0);
+                }
+            }
+        }
+    }
     
     
     
     void AddGrid()
     {
-        float xOffset = width / 2-0.5f;
-        float yOffset = height / 2-0.5f;
         foreach (Transform child in transform)
         {
             int roundX = (int) (child.position.x + xOffset);
@@ -95,8 +145,7 @@ public class TetricBlock : MonoBehaviour
     
     bool ValidMove()
     {
-        int xOffset = width / 2;
-        int yOffset = height / 2;
+        
         
         foreach (Transform children in transform)
         {
