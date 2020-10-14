@@ -30,7 +30,7 @@ public class TetricBlock : MonoBehaviour
         bottom = - height / 2;
         up =  height / 2;
         
-        print($"left {left} right {right} bottom {bottom}");
+        print($"left {left} right {right} bottom {bottom} xOffset{xOffset}, yOffset{yOffset}");
     }
 
     // Update is called once per frame
